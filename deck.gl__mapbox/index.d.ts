@@ -12,7 +12,7 @@ declare module '@deck.gl/mapbox/mapbox-layer' {
 
   export type RenderingMode = '2d' | '3d';
 
-  export interface MapboxLayerProps<D> extends LayerProps<D> {
+  export interface MapboxLayerProps<D, P extends LayerProps<D>> extends Component<P> {
     id: string;
     deck?: Deck;
     renderingMode?: RenderingMode;
